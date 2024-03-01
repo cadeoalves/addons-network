@@ -19,9 +19,10 @@ options:
   dns:
     - 1.1.1.1
     - 2.2.2.2
-    - 192.168.1.1
-  ntp: []
-  domain: null
+  ntp: 
+    - 192.168.1.0
+  domain: 
+    - home.local
   hosts: []
   max_lease: 172800
   networks:
@@ -48,6 +49,8 @@ schema:
       mac: str
       name: str
   max_lease: int
+  internet_sharing: true
+  interfaces: str
   networks:
     - broadcast: str
       gateway: str
