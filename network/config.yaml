@@ -11,4 +11,4 @@ map:
   - share:rw
 options: {}
 schema: {}
-image: cadeocarlos/meu-addon-compartilha-internet:latest
+image: "hub.docker.com/r/cadeocarlos/meu-addon-compartilha-internet"
