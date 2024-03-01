@@ -78,7 +78,7 @@ fi
 # Adicione aqui as regras específicas do firewall conforme necessário
 
 # Exemplo de regra para permitir tráfego DHCP:
-iptables -A INPUT -p udp --dport 67:68 --sport 67:68 -j ACCEPT
+#iptables -A INPUT -p udp --dport 67:68 --sport 67:68 -j ACCEPT
 
 # Exemplo de regra para compartilhamento de internet (NAT):
 #iptables -t nat -A POSTROUTING -o enp2s0 -j MASQUERADE
