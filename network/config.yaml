@@ -2,6 +2,8 @@ name: Meu Addon Compartilha Internet
 version: "1.0.0"
 slug: meu-addon-compartilha-internet
 description: Addon para compartilhar a internet entre redes.
+url: https://home-assistant.io/addons/dhcp_server/
+codenotary: notary@home-assistant.io
 arch:
   - armhf
   - armv7
@@ -11,4 +13,4 @@ map:
   - share:rw
 options: {}
 schema: {}
-image: "hub.docker.com/r/cadeocarlos/meu-addon-compartilha-internet:latest"
+image: homeassistant/{arch}-addon-dhcp_server
