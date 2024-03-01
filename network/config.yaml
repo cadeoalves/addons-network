@@ -1,16 +1,59 @@
-name: Meu Addon Compartilha Internet
+---
 version: 1.3.1
-slug: meu-addon-compartilha-internet
-description: Addon para compartilhar a internet entre redes.
+slug: dhcp_server
+name: DHCP server With Internet Shared
+description: A simple DHCP server
 url: https://home-assistant.io/addons/dhcp_server/
 codenotary: notary@home-assistant.io
+advanced: true
 arch:
   - armhf
   - armv7
+  - aarch64
   - amd64
-init: false
-map:
-  - share:rw
-options: {}
-schema: {}
+  - i386
+host_network: true
 image: homeassistant/{arch}-addon-dhcp_server
+options:
+  default_lease: 86400
+  dns:
+    - 8.8.8.8
+    - 8.8.4.4
+  ntp: []
+  domain: null
+  hosts: []
+  max_lease: 172800
+  networks:
+    - broadcast: 192.168.1.255
+      gateway: 192.168.1.1
+      interface: eth0
+      netmask: 255.255.255.0
+      range_end: 192.168.1.200
+      range_start: 192.168.1.100
+      subnet: 192.168.1.0
+internet_sharing: true  # Adiciona a opção de compartilhamento de internet
+interfaces:  # Adiciona a seleção de interfaces
+  - eth0
+  - wlan0
+schema:
+  default_lease: int
+  dns:
+    - str
+  ntp:
+    - str
+  domain: str
+  hosts:
+    - ip: str
+      mac: str
+      name: str
+  max_lease: int
+  networks:
+    - broadcast: str
+      gateway: str
+      interface: str
+      netmask: str
+      range_end: str
+      range_start: str
+      subnet: str
+startup: system
+init: false
