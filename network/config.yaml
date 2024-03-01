@@ -1,0 +1,14 @@
+name: Meu Addon Compartilha Internet
+version: "1.0.0"
+slug: meu-addon-compartilha-internet
+description: Addon para compartilhar a internet entre redes.
+arch:
+  - armhf
+  - armv7
+  - amd64
+init: false
+map:
+  - share:rw
+options: {}
+schema: {}
+image: "docker.io/seu_usuario/meu-addon-compartilha-internet"
