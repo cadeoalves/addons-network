@@ -49,8 +49,6 @@ schema:
       mac: str
       name: str
   max_lease: int
-  internet_sharing: str
-  interfaces: str
   networks:
     - broadcast: str
       gateway: str
