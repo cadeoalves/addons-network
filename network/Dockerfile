@@ -1,14 +1,15 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# Add env
-ENV LANG C.UTF-8
+# Adicione o servidor DHCP e o iptables
+RUN apk add --no-cache dhcp iptables
 
-# Setup base
-RUN apk add --no-cache dhcp
-RUN apk add --no-cache 
+# Adicione outras dependências, se necessário
 
-# Copy data
+# Adicione o restante do seu código Dockerfile aqui, se aplicável
+
+# Copie o script run.sh
 COPY data/run.sh /
 
-CMD [ "/run.sh" ]
+# Defina o comando padrão para executar o script run.sh quando o contêiner for iniciado
+CMD [ "/start.sh" ]
