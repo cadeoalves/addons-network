@@ -12,4 +12,4 @@ RUN apk add --no-cache dhcp iptables
 COPY data/run.sh /
 
 # Defina o comando padrão para executar o script run.sh quando o contêiner for iniciado
-CMD [ "/start.sh" ]
+CMD [ "/run.sh" ]
