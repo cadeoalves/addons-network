@@ -81,7 +81,7 @@ fi
 iptables -A INPUT -p udp --dport 67:68 --sport 67:68 -j ACCEPT
 
 # Exemplo de regra para compartilhamento de internet (NAT):
-iptables -t nat -A POSTROUTING -o enp2s0 -j MASQUERADE
+#iptables -t nat -A POSTROUTING -o enp2s0 -j MASQUERADE
 
 # Inicie o servidor DHCP
 bashio::log.info "Starting DHCP server with shared internet NAT..."
