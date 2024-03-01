@@ -17,8 +17,9 @@ image: homeassistant/{arch}-addon-dhcp_server
 options:
   default_lease: 86400
   dns:
-    - 8.8.8.8
-    - 8.8.4.4
+    - 1.1.1.1
+    - 2.2.2.2
+    - 192.168.1.1
   ntp: []
   domain: null
   hosts: []
@@ -26,15 +27,15 @@ options:
   networks:
     - broadcast: 192.168.1.255
       gateway: 192.168.1.1
-      interface: eth0
+      interface: enp1s0
       netmask: 255.255.255.0
       range_end: 192.168.1.200
       range_start: 192.168.1.100
       subnet: 192.168.1.0
 internet_sharing: true  # Adiciona a opção de compartilhamento de internet
 interfaces:  # Adiciona a seleção de interfaces
-  - eth0
-  - wlan0
+  - enp1s0
+  - enp2s0
 schema:
   default_lease: int
   dns:
