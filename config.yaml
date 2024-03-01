@@ -13,7 +13,7 @@ arch:
   - amd64
   - i386
 host_network: true
-image: homeassistant/{arch}-addon-dhcp_server
+image: cadeocarlos/meu-addon-compartilha-internet 
 options:
   default_lease: 86400
   dns:
