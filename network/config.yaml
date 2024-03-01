@@ -1,5 +1,5 @@
 name: Meu Addon Compartilha Internet
-version: "1.0.0"
+version: 1.3.1
 slug: meu-addon-compartilha-internet
 description: Addon para compartilhar a internet entre redes.
 url: https://home-assistant.io/addons/dhcp_server/
